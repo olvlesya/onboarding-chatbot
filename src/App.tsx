@@ -1,24 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState, useRef } from "react";
+
+import { Message } from "./components/Message";
+import { steps, stepsOptions, messageType } from "./data";
+import logo from "./images/logo.svg";
+import "./App.scss";
+import "./fonts.css";
 
 function App() {
+  const [step, setStep] = useState<stepsOptions>("greeting");
+  const [messages, setMessages] = useState<messageType[]>([]);
+  const scrollRef = useRef<HTMLLIElement | null>(null);
+  const currentStep = steps[step];
+
+  useEffect(() => {
+    setMessages((prevMessages) => prevMessages.concat(currentStep.messages));
+  }, [step]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      scrollRef.current?.scrollIntoView();
+    }, 10);
+  }, [messages]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="chat">
+        <div className="chat__head">
+          <img src={logo} alt="" />
+        </div>
+        <div className="chat__body">
+          <ul className="messages">
+            {messages.map((message, id) => (
+              <Message key={id} {...message} />
+            ))}
+            <li ref={scrollRef} />
+          </ul>
+        </div>
+        <div className="chat__footer">
+          {currentStep.options.map((option, id) => (
+            <button
+              key={id}
+              className="full"
+              onClick={() => {
+                setMessages((prevMessages) =>
+                  prevMessages.concat([
+                    {
+                      jsx: () => <span>{option.text}</span>,
+                      me: true,
+                    },
+                  ])
+                );
+                setStep(option.next);
+              }}
+            >
+              {option.text}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

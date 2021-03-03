@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  background: linear-gradient(243.15deg, #6dc8e4 0%, #8ed6ff 103.13%);
+}
+.fullscreen.fullscreen-enabled > div {
+  width: 100vw;
+  height: 100vh;
+}
+iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+.chat {
+  background: #eeeded;
+  border-radius: 10px;
+  width: 380px;
+  height: 600px;
+  margin: 0 30px;
+
+  &__head {
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px;
+    background: #ffffff;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 4px 4px rgba(173, 173, 173, 0.25);
+    height: 70px;
+
+    img {
+      height: 50px;
+    }
+  }
+  &__body {
+    height: calc(100% - 70px - 70px);
+
+    .messages {
+      height: 100%;
+      overflow: auto;
+      margin: 0;
+      padding-left: 0;
+
+      .text {
+        margin-right: 0px !important;
+      }
+
+      .message {
+        width: 100%;
+        padding: 5px 20px 5px 20px;
+        list-style-type: none;
+
+        &:first-child {
+          padding-top: 15px !important;
+        }
+
+        &:last-child {
+          padding-bottom: 15px !important;
+        }
+
+        .text {
+          background: #ffffff;
+          border: 1px solid #ffffff;
+          box-sizing: border-box;
+          box-shadow: 0px 4px 14px rgba(157, 151, 151, 0.25);
+          border-radius: 10px;
+          padding: 15px;
+          min-height: 30px;
+          font: 400 14px "Open Sans", sans-serif;
+          margin-right: 30px;
+        }
+
+        .text.me {
+          border: 1px solid #b3d2ea;
+          background: #b3d2ea;
+          box-shadow: 0px 4px 4px rgba(153, 136, 136, 0.25);
+          margin-right: 0;
+        }
+      }
+
+      .message.me {
+        padding: 5px 10px 5px 50px;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background: #dfdfdf;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 10px 10px;
+    padding: 0 10px;
+
+    input,
+    button {
+      height: 40px;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid white;
+
+      &:focus,
+      &:hover {
+        border: 1px solid #42b983;
+        outline: 0;
+      }
+    }
+
+    input {
+      width: 100%;
+      margin: 0 10px 0 10px;
+
+      &[type="date"] {
+        padding: 0 20px;
+        width: 70%;
+      }
+    }
+
+    button {
+      font: 400 16px "Open Sans", sans-serif;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.full {
+        width: 100%;
+      }
+    }
+  }
+}
