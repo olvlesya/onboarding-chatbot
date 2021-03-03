@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/onboarding-chatbot/static/css/main.9ddccb9f.chunk.css",
-    "main.js": "/onboarding-chatbot/static/js/main.86a3ef65.chunk.js",
-    "main.js.map": "/onboarding-chatbot/static/js/main.86a3ef65.chunk.js.map",
-    "runtime-main.js": "/onboarding-chatbot/static/js/runtime-main.4a737177.js",
-    "runtime-main.js.map": "/onboarding-chatbot/static/js/runtime-main.4a737177.js.map",
-    "static/js/2.afb29dfd.chunk.js": "/onboarding-chatbot/static/js/2.afb29dfd.chunk.js",
-    "static/js/2.afb29dfd.chunk.js.map": "/onboarding-chatbot/static/js/2.afb29dfd.chunk.js.map",
-    "static/js/3.d4dc8fdd.chunk.js": "/onboarding-chatbot/static/js/3.d4dc8fdd.chunk.js",
-    "static/js/3.d4dc8fdd.chunk.js.map": "/onboarding-chatbot/static/js/3.d4dc8fdd.chunk.js.map",
+    "main.css": "/onboarding-chatbot/static/css/main.c54b1723.chunk.css",
+    "main.js": "/onboarding-chatbot/static/js/main.140738d4.chunk.js",
+    "main.js.map": "/onboarding-chatbot/static/js/main.140738d4.chunk.js.map",
+    "runtime-main.js": "/onboarding-chatbot/static/js/runtime-main.cb81c4c9.js",
+    "runtime-main.js.map": "/onboarding-chatbot/static/js/runtime-main.cb81c4c9.js.map",
+    "static/js/2.5d362488.chunk.js": "/onboarding-chatbot/static/js/2.5d362488.chunk.js",
+    "static/js/2.5d362488.chunk.js.map": "/onboarding-chatbot/static/js/2.5d362488.chunk.js.map",
+    "static/js/3.a0bf91c6.chunk.js": "/onboarding-chatbot/static/js/3.a0bf91c6.chunk.js",
+    "static/js/3.a0bf91c6.chunk.js.map": "/onboarding-chatbot/static/js/3.a0bf91c6.chunk.js.map",
     "index.html": "/onboarding-chatbot/index.html",
-    "static/css/main.9ddccb9f.chunk.css.map": "/onboarding-chatbot/static/css/main.9ddccb9f.chunk.css.map",
-    "static/js/2.afb29dfd.chunk.js.LICENSE.txt": "/onboarding-chatbot/static/js/2.afb29dfd.chunk.js.LICENSE.txt",
+    "static/css/main.c54b1723.chunk.css.map": "/onboarding-chatbot/static/css/main.c54b1723.chunk.css.map",
+    "static/js/2.5d362488.chunk.js.LICENSE.txt": "/onboarding-chatbot/static/js/2.5d362488.chunk.js.LICENSE.txt",
     "static/media/logo.aacb8274.svg": "/onboarding-chatbot/static/media/logo.aacb8274.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4a737177.js",
-    "static/js/2.afb29dfd.chunk.js",
-    "static/css/main.9ddccb9f.chunk.css",
-    "static/js/main.86a3ef65.chunk.js"
+    "static/js/runtime-main.cb81c4c9.js",
+    "static/js/2.5d362488.chunk.js",
+    "static/css/main.c54b1723.chunk.css",
+    "static/js/main.140738d4.chunk.js"
   ]
 }
