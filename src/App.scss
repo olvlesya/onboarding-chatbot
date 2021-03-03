@@ -137,6 +137,12 @@ iframe {
 
       &.full {
         width: 100%;
+
+        &:focus,
+        &:hover {
+          border: 2px solid #42b983;
+          outline: 0;
+        }
       }
     }
   }

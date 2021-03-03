@@ -1,4 +1,12 @@
-export type stepsOptions = "greeting" | "intro" | "introCourse" | "rateCourse";
+export type stepsOptions =
+  | "greeting"
+  | "intro"
+  | "introCourse"
+  | "rateCourse1"
+  | "rateCourse2"
+  | "rateCourse3"
+  | "answer"
+  | "end";
 export type messageType = {
   jsx: () => JSX.Element;
   type?: "message" | "iframe";
@@ -63,11 +71,11 @@ export const steps: stepsType = {
     options: [
       {
         text: "Оценить курс",
-        next: "rateCourse",
+        next: "rateCourse1",
       },
     ],
   },
-  rateCourse: {
+  rateCourse1: {
     messages: [
       {
         jsx: () => (
@@ -79,6 +87,59 @@ export const steps: stepsType = {
         ),
       },
     ],
+    options: [...Array(11)].map((_c, id) => ({
+      text: String(id),
+      next: "rateCourse2",
+    })),
+  },
+  rateCourse2: {
+    messages: [
+      {
+        jsx: () => (
+          <span>
+            2. Оцените, пожалуйста, по шкале от 1 до 10 - насколько понятно для
+            Вас была донесена информация о Компании и сфере её деятельности. Где
+            0 – совсем не понятно, а 10 – понятно полностью.
+          </span>
+        ),
+      },
+    ],
+    options: [...Array(11)].map((_c, id) => ({
+      text: String(id),
+      next: "rateCourse3",
+    })),
+  },
+  rateCourse3: {
+    messages: [
+      {
+        jsx: () => (
+          <span>
+            3. Оцените, пожалуйста, по шкале от 1 до 5, посоветовали бы Вы этот
+            курс своему коллеге новичку . Где 0 – точно нет, а 5 – конечно да!
+          </span>
+        ),
+      },
+    ],
+    options: [...Array(11)].map((_c, id) => ({
+      text: String(id),
+      next: "answer",
+    })),
+  },
+  answer: {
+    messages: [
+      {
+        jsx: () => <span>Спасибо за ваши ответы!</span>,
+      },
+    ],
+    options: [
+      {
+        text: "Курс окончен",
+        next: "end",
+      },
+    ],
+  },
+  end: {
+    messages: [],
     options: [],
   },
 };
