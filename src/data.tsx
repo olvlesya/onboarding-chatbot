@@ -1,4 +1,4 @@
-export type stepsOptions = "greeting" | "intro" | "introCourse";
+export type stepsOptions = "greeting" | "intro" | "introCourse" | "rateCourse";
 export type messageType = {
   jsx: () => JSX.Element;
   type?: "message" | "iframe";
@@ -55,6 +55,25 @@ export const steps: stepsType = {
           <iframe title="gfd-training" src="/trainings/gfd/index.html"></iframe>
         ),
         type: "iframe",
+      },
+    ],
+    options: [
+      {
+        text: "Оценить курс",
+        next: "rateCourse",
+      },
+    ],
+  },
+  rateCourse: {
+    messages: [
+      {
+        jsx: () => (
+          <span>
+            1. Оцените, пожалуйста, по шкале от 1 до 10 - насколько Вам
+            понравился welcome курс. Где 0 – совсем не понравился, а 10 – очень
+            понравился.
+          </span>
+        ),
       },
     ],
     options: [],
