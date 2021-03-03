@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     setMessages((prevMessages) => prevMessages.concat(currentStep.messages));
-  }, [step]);
+  }, [step]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     setTimeout(() => {
