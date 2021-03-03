@@ -52,7 +52,7 @@ export const steps: stepsType = {
     messages: [
       {
         jsx: () => (
-          <iframe title="gfd-training" src="/trainings/gfd/index.html"></iframe>
+          <iframe title="gfd-training" src="trainings/gfd/index.html"></iframe>
         ),
         type: "iframe",
       },
